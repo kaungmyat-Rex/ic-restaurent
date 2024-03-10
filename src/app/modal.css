@@ -1,0 +1,28 @@
+.modal {
+  transition: opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-overlay {
+  background-color: rgba(23, 31, 38, 0.8);
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal-main {
+  transform: translateY(200%);
+  transition: transform 0.2s ease-in-out;
+  background-color: #1b1828;
+}
+
+.open-modal {
+  transition: opacity 0.2s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.open-modal-main {
+  transform: translateY(85%);
+  transition: transform 0.2s ease-in-out;
+}

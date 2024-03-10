@@ -1,0 +1,90 @@
+.modal-pickup {
+  transition: opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-overlay-pickup {
+  background-color: rgba(23, 31, 38, 0.8);
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal-main-pickup {
+  transform: translateY(200%);
+  transition: transform 0.2s ease-in-out;
+  background-color: #1b1828;
+}
+
+.open-modal-pickup {
+  transition: opacity 0.2s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.open-modal-main-pickup {
+  transform: translateY(25%);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* --------- */
+
+.modal-number {
+  transition: opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-overlay-number {
+  background-color: rgba(23, 31, 38, 0.8);
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal-main-number {
+  transform: translateY(200%);
+  transition: transform 0.2s ease-in-out;
+  background-color: #1b1828;
+}
+
+.open-modal-number {
+  transition: opacity 0.2s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.open-modal-main-number {
+  transform: translateY(0%);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* --------- */
+
+.modal-delete {
+  transition: opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-overlay-delete {
+  background-color: rgba(23, 31, 38, 0.8);
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal-main-delete {
+  transform: translateY(200%);
+  transition: transform 0.2s ease-in-out;
+  background-color: #1b1828;
+}
+
+.open-modal-delete {
+  transition: opacity 0.2s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.open-modal-main-delete {
+  transform: translateY(0%);
+  transition: transform 0.2s ease-in-out;
+}
