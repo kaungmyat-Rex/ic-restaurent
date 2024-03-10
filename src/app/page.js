@@ -8,7 +8,8 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "./config/firebase";
-
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 export default async function Home() {
   const data = await getDocs(
     query(collection(db, "store"), orderBy("count", "asc"))
@@ -28,7 +29,6 @@ export default async function Home() {
   const pickupData = queryData.docs.map((doc) => {
     return { id: doc.id, ...doc.data() };
   });
-  console.log("🚀 ~ pickupData ~ pickupData:", pickupData);
 
   return (
     <main>

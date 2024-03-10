@@ -6,7 +6,6 @@ const page = async ({ searchParams }) => {
   const documentRef = doc(db, "store", searchParams?.itemId);
   const documentSnapshot = await getDoc(documentRef);
   const data = { ...documentSnapshot.data(), id: documentSnapshot.id };
-  console.log("🚀 ~ page ~ data:", data);
 
   return <EditStoreElements data={data} itemId={searchParams?.itemId} />;
 };
