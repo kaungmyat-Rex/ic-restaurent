@@ -75,7 +75,7 @@
 .modal-main-delete {
   transform: translateY(200%);
   transition: transform 0.2s ease-in-out;
-  background-color: #1b1828;
+  /* background-color: #1b1828; */
 }
 
 .open-modal-delete {
