@@ -29,6 +29,7 @@ export default async function Home() {
   const pickupData = queryData.docs.map((doc) => {
     return { id: doc.id, ...doc.data() };
   });
+  console.log("🚀 ~ pickupData ~ pickupData:", pickupData);
 
   return (
     <main>
