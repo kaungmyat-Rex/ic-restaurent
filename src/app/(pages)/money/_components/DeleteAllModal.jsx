@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 const DeleteAllModal = ({ popup, setPopup }) => {
   const router = useRouter();
-  const collectionRef = collection(db, "pickup");
+  const collectionRef = collection(db, "money");
 
   const handleDeleteAllData = async () => {
     await getDocs(collectionRef)

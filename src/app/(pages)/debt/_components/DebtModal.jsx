@@ -1,18 +1,17 @@
 "use client";
+import React from "react";
 import { deleteDoc, doc } from "firebase/firestore";
 import Link from "next/link";
-import React from "react";
 import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-import { db } from "../config/firebase";
+import { db } from "@/app/config/firebase";
 import { useRouter } from "next/navigation";
-
-const ModalPopup = ({ popup, setPopup, itemInfo }) => {
+const DebtModal = ({ popup, setPopup, itemInfo }) => {
   const itemsId = itemInfo?.id;
 
   const router = useRouter();
-  const deleteStoreItem = async () => {
-    const userCollection = doc(db, "store", itemsId);
+  const deleteDebtItem = async () => {
+    const userCollection = doc(db, "debt", itemsId);
     await deleteDoc(userCollection);
     setPopup(false);
     router.refresh();
@@ -36,18 +35,18 @@ const ModalPopup = ({ popup, setPopup, itemInfo }) => {
         </div>
         <div className="flex flex-col bg-[#231f32] rounded-xl text-white text-lg font-medium items-start mt-5">
           <Link
-            href={`/store/editItem?itemId=${itemInfo?.id}`}
+            href={`/debt/editDebt?itemId=${itemInfo?.id}`}
             className="flex justify-start items-center gap-x-3 py-4 px-3 border-b border-[#42464c] w-full"
           >
             <MdModeEdit className="text-[#26a0d9]" size={24} />{" "}
-            <span>Edit Item</span>
+            <span>Edit အကြွေး</span>
           </Link>
           <p
             className="flex justify-start items-center gap-x-3 py-4 px-3 w-full"
-            onClick={() => deleteStoreItem()}
+            onClick={() => deleteDebtItem()}
           >
             <MdDelete className="text-[#26a0d9]" size={24} />{" "}
-            <span>Delete Item</span>
+            <span>Delete အကြွေး</span>
           </p>
         </div>
       </div>
@@ -55,4 +54,4 @@ const ModalPopup = ({ popup, setPopup, itemInfo }) => {
   );
 };
 
-export default ModalPopup;
+export default DebtModal;

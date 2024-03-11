@@ -14,14 +14,14 @@ const PickupModal = ({ popup, setPopup, DescStoreData }) => {
   const modelOverlay = `modal-overlay-pickup absolute w-full h-full left-0 top-0`;
   const modelMain = `modal-main-pickup ${
     popup ? "open-modal-main-pickup" : ""
-  } absolute max-w-[500px] md:max-w-[900px] h-[600px] bg-[#2d2f36] left-2 right-2 rounded-3xl shadow-md overflow-y-scroll`;
+  } absolute max-w-[1000px] h-[600px] bg-[#2d2f36] left-2 right-2 rounded-3xl shadow-md overflow-y-scroll`;
   return (
     <>
       <div className={modelClass}>
         <div className={modelOverlay} onClick={() => setPopup(false)} />
         <div className={modelMain}>
           <table className="w-full shadow-sm rounded-xl pb-10">
-            <thead className="rounded-xl w-full sticky top-0 left-0 bg-[#1b1828]">
+            <thead className="rounded-xl w-full sticky top-0 left-0 bg-[#1b1828] ">
               <tr className="">
                 <td className="text-left text-[#26a0d9] w-[10%] py-4 pl-3">
                   No

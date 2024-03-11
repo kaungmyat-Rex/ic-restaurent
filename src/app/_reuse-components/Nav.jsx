@@ -7,6 +7,7 @@ import { FaStore } from "react-icons/fa";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { FaTruckPickup } from "react-icons/fa";
 import { FaMoneyCheck } from "react-icons/fa";
+
 const Nav = () => {
   const pathname = usePathname("");
   return (
@@ -56,6 +57,15 @@ const Nav = () => {
         >
           <FaMoneyCheck size={27} />
           <span className="text-sm">Debt</span>
+        </Link>
+      </div>
+      <div className="flex justify-center items-center text-xs text-gray-500">
+        Developed by{" "}
+        <Link
+          className="text-[#26a0d9]"
+          href={"https://kaungmyat.netlify.app/"}
+        >
+          @kaungmyat
         </Link>
       </div>
     </div>

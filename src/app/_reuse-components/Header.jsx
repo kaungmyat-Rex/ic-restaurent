@@ -5,7 +5,10 @@ import React from "react";
 const Header = () => {
   const pathname = usePathname();
 
-  return pathname.includes("store") ? (
+  return pathname.includes("store") ||
+    pathname.includes("pickup") ||
+    pathname.includes("money") ||
+    pathname.includes("debt") ? (
     <></>
   ) : (
     <div className="flex justify-center items-center py-3">
