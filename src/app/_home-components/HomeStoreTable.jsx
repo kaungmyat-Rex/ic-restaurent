@@ -11,9 +11,12 @@ const HomeStoreTable = ({ DescStoreData }) => {
         <thead className="rounded-xl w-full bg-[#2a253c]">
           <tr className="">
             <td className="text-left text-[#26a0d9] w-[10%] py-3 pl-3">No</td>
-            <td className="text-left text-[#26a0d9] w-[60%] py-3 pl-3">Item</td>
+            <td className="text-left text-[#26a0d9] w-[45%] py-3 pl-3">Item</td>
             <td className="text-left text-[#26a0d9] w-[15%] py-3 pl-3">
               Price
+            </td>
+            <td className="text-left text-[#26a0d9] w-[15%] py-3 pl-3">
+              Total Price
             </td>
             <td className="text-left text-[#26a0d9] w-[15%] py-3 pl-3 pr-3">
               Count

@@ -14,7 +14,7 @@ const PickupModal = ({ popup, setPopup, DescStoreData }) => {
   const modelOverlay = `modal-overlay-pickup absolute w-full h-full left-0 top-0`;
   const modelMain = `modal-main-pickup ${
     popup ? "open-modal-main-pickup" : ""
-  } absolute max-w-[1000px] h-[600px] bg-[#2d2f36] left-2 right-2 rounded-3xl shadow-md overflow-y-scroll`;
+  } absolute max-w-[1400px] h-[600px] bg-[#2d2f36] left-2 right-2 rounded-3xl shadow-md overflow-y-scroll`;
   return (
     <>
       <div className={modelClass}>

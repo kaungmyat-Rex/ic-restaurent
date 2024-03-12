@@ -69,7 +69,7 @@ const NumberModal = ({
   const modelOverlay = `modal-overlay-number absolute w-full h-full left-0 top-0`;
   const modelMain = `modal-main-number ${
     numberpopup ? "open-modal-main-number" : ""
-  } absolute max-w-[500px] md:max-w-[900px] bg-[#2d2f36] left-2 sm:left-[15%] right-2 rounded-md shadow-md overflow-y-scroll`;
+  } absolute max-w-[500px] bg-[#2d2f36] left-2 sm:left-[15%] right-2 rounded-md shadow-md overflow-y-scroll`;
   return (
     <div className={modelClass}>
       <div className={modelOverlay} onClick={() => setNumberpopup(false)} />

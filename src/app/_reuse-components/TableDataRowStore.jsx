@@ -2,6 +2,8 @@
 import React from "react";
 
 const TableDataRowStore = ({ item, index, setPopup, setItemInfo }) => {
+  const totalPrice = item.price * item.count;
+
   return (
     <tr
       key={item.id}
@@ -17,8 +19,9 @@ const TableDataRowStore = ({ item, index, setPopup, setItemInfo }) => {
       }}
     >
       <td className="text-left text-white w-[10%] py-3 pl-3">{index + 1}</td>
-      <td className="text-left text-white w-[60%] py-3 pl-3">{item.item}</td>
+      <td className="text-left text-white w-[45%] py-3 pl-3">{item.item}</td>
       <td className="text-left text-white w-[15%] py-3 pl-3">{item.price}</td>
+      <td className="text-left text-white w-[15%] py-3 pl-3">{totalPrice}</td>
       <td className="text-left text-white w-[15%] py-3 pl-3 pr-3">
         {item.count}
       </td>
