@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import NumberModal from "./NumberModal";
+import Search from "../(pages)/store/_components/Search";
 
 const PickupModal = ({ popup, setPopup, DescStoreData }) => {
   const [numberpopup, setNumberpopup] = useState(false);
@@ -8,20 +9,32 @@ const PickupModal = ({ popup, setPopup, DescStoreData }) => {
   const [itemcount, setItemcount] = useState(0);
   const [itemprice, setItemprice] = useState(0);
   const [itemId, setItemId] = useState("");
+  const [searchStoreData, setSearchStoreData] = useState(DescStoreData);
+  const [loading, setLoading] = useState(false);
+
   const modelClass = `modal-pickup ${
     popup ? "open-modal-pickup" : ""
   } fixed w-full h-full left-0 top-0 z-20 flex justify-center items-center`;
   const modelOverlay = `modal-overlay-pickup absolute w-full h-full left-0 top-0`;
   const modelMain = `modal-main-pickup ${
     popup ? "open-modal-main-pickup" : ""
-  } absolute max-w-[1400px] h-[600px] bg-[#2d2f36] left-2 right-2 rounded-3xl shadow-md overflow-y-scroll`;
+  } absolute max-w-[1400px] h-[600px] bg-[#2d2f36] left-2 right-2 rounded-3xl shadow-md overflow-y-scroll pt-5`;
   return (
     <>
       <div className={modelClass}>
         <div className={modelOverlay} onClick={() => setPopup(false)} />
+
+        <div className="w-full fixed top-[340px] left-0 z-10">
+          <Search
+            data={DescStoreData}
+            setSearchStoreData={setSearchStoreData}
+            loading={loading}
+            setLoading={setLoading}
+          />
+        </div>
         <div className={modelMain}>
           <table className="w-full shadow-sm rounded-xl pb-10">
-            <thead className="rounded-xl w-full sticky top-0 left-0 bg-[#1b1828] ">
+            <thead className="rounded-xl w-full sticky top-0 left-0 bg-[#1b1828]">
               <tr className="">
                 <td className="text-left text-[#26a0d9] w-[10%] py-4 pl-3">
                   No
@@ -35,7 +48,7 @@ const PickupModal = ({ popup, setPopup, DescStoreData }) => {
               </tr>
             </thead>
             <tbody className="text-left text-white">
-              {DescStoreData?.map((item, index) => {
+              {searchStoreData?.map((item, index) => {
                 return (
                   <tr
                     key={item.id}
